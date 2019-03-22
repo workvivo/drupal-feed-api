@@ -1,0 +1,5 @@
+name: Workvivo API
+description: Provide a local endpoint for displaying workvivo posts
+package: Custom
+type: module
+core: 8.x
