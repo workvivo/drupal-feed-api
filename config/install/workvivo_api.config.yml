@@ -1,2 +1,2 @@
-api_base: 'https://ianvivo.eu.ngrok.io/api/'
-api_key: 'fAC8WCh0fp5XbXNjH8cK5YxBfvyysexjKpUQuLSk'
+api_base: 'https://[your-workvivo-domain-here]/api/'
+api_key: '[your-workvivo-api-key-here]'
