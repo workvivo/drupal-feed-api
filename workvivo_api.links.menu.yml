@@ -1,0 +1,6 @@
+workvivo_api.admin:
+  title: 'Workvivo API module settings'
+  description: 'API connection details for your workvivo API'
+  parent: system.admin_config_development
+  route_name: workvivo_api.config
+  weight: 100

@@ -1,0 +1,7 @@
+workvivo_api.config:
+  path: '/admin/config/workvivo_api/config'
+  defaults:
+    _form: '\Drupal\workvivo_api\Form\workvivoApiConfigForm'
+    _title: 'Workvivo API Configuration'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,2 @@
+api_base: 'https://[your-workvivo-domain-here]/api/'
+api_key: '[your-workvivo-api-key-here]'
