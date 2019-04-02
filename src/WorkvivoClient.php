@@ -23,9 +23,13 @@ class WorkvivoClient {
    *
    * @return array
    */
-  public function fetch($url, $token) {
+  public function fetch($url, $token, $space) {
       try {
-        $response = $this->client->get($url .'feed', ['headers' => 
+          $argument = '';
+          if($space) {
+              $argument = '?space='.$space;
+          }
+        $response = $this->client->get($url .'feed' . $argument, ['headers' => 
             [
                 'Authorization' => "Bearer $token"
             ]

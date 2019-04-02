@@ -23,20 +23,24 @@ class WorkvivoResource extends ResourceBase {
      * Responds to entity GET requests.
      * @return \Drupal\rest\ResourceResponse
      */
+    private $space;
     public function get() {
         $config = \Drupal::config('workvivo_api.settings');
 
         $url = $config->get('workvivo_api.api_url');
         $key = $config->get('workvivo_api.api_key');
 
+        $this->space = $_GET['space'];
+
         if($url && $key) {
-            $response = $this->workvivoClient->fetch($url, $key);
+            $response = $this->workvivoClient->fetch($url, $key, $this->space);
         } else {
             $response = ['error' => 'Api config information not set'];
         }
 
-        return new ResourceResponse($response);
+        return (new ResourceResponse($response))->addCacheableDependency(null);
     }
+    
 	protected $workvivoClient;
 
 
